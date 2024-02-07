@@ -124,13 +124,15 @@ INSERT INTO `department_list` (`id`, `name`, `description`, `status`, `delete_fl
 CREATE TABLE `student_list` (
   `id` int(30) NOT NULL,
   `roll` varchar(100) NOT NULL,
+  `lastname` text NOT NULL,
   `firstname` text NOT NULL,
   `middlename` text DEFAULT NULL,
-  `lastname` text NOT NULL,
+   `Course_Year_&_sec` text NOT NULL,
   `gender` varchar(100) NOT NULL,
   `contact` text NOT NULL,
   `present_address` text NOT NULL,
   `permanent_address` text NOT NULL,
+  
   `dob` date NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 1,
   `delete_flag` tinyint(1) NOT NULL DEFAULT 0,
@@ -142,7 +144,7 @@ CREATE TABLE `student_list` (
 -- Dumping data for table `student_list`
 --
 
-INSERT INTO `student_list` (`id`, `roll`, `firstname`, `middlename`, `lastname`, `gender`, `contact`, `present_address`, `permanent_address`, `dob`, `status`, `delete_flag`, `date_created`, `date_updated`) VALUES
+INSERT INTO `student_list` (`id`, `roll`, `middlename`,`firstname`, `lastname`, `Course_Year_&_sec`, `gender`, `contact`, `present_address`, `permanent_address`, `dob`, `status`, `delete_flag`, `date_created`, `date_updated`) VALUES
 (1, '231415061007', 'Mark', 'D', 'Cooper', 'Male', '09123456789', 'This my sample present address.', 'This my sample permanent address.', '2007-06-23', 1, 0, '2022-01-27 11:14:07', '2022-01-28 08:50:13');
 
 -- --------------------------------------------------------
